@@ -797,8 +797,8 @@
         <update>Insert</update>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
-        <lookup>fecha_nacimiento</lookup>
+        <name>edad</name>
+        <lookup>edad</lookup>
         <update>Insert</update>
       </field>
       <field>
@@ -837,7 +837,7 @@
         <update>Insert</update>
       </field>
       <return>
-        <name>key_persona</name>
+        <name>pk_afiliado</name>
         <rename/>
         <creation_method>tablemax</creation_method>
         <use_autoinc>N</use_autoinc>
@@ -1235,21 +1235,27 @@ FROM public.ips</sql>
       </field>
       <field>
         <name>nombre</name>
+        <rename/>
       </field>
       <field>
         <name>sexo</name>
+        <rename/>
       </field>
       <field>
         <name>estado_civil</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
+        <name>edad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_discapacidad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>cotizante</name>
@@ -1257,9 +1263,11 @@ FROM public.ips</sql>
       </field>
       <field>
         <name>municipio</name>
+        <rename/>
       </field>
       <field>
         <name>departamento</name>
+        <rename/>
       </field>
       <field>
         <name>estracto</name>
@@ -1267,6 +1275,7 @@ FROM public.ips</sql>
       </field>
       <field>
         <name>proviene_otra_eps</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1298,6 +1307,7 @@ FROM public.ips</sql>
     <fields>
       <field>
         <name>tipo_documento</name>
+        <rename/>
       </field>
       <field>
         <name>cedula</name>
@@ -1305,27 +1315,35 @@ FROM public.ips</sql>
       </field>
       <field>
         <name>nombre</name>
+        <rename/>
       </field>
       <field>
         <name>sexo</name>
+        <rename/>
       </field>
       <field>
         <name>estado_civil</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
+        <name>edad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_discapacidad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>grupo_familiar</name>
+        <rename/>
       </field>
       <field>
         <name>id_ips</name>
+        <rename/>
       </field>
       <field>
         <name>estracto</name>
@@ -1333,6 +1351,7 @@ FROM public.ips</sql>
       </field>
       <field>
         <name>proviene_otra_eps</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1364,27 +1383,35 @@ FROM public.ips</sql>
     <fields>
       <field>
         <name>tipo_documento</name>
+        <rename/>
       </field>
       <field>
         <name>numero_identificacion</name>
+        <rename/>
       </field>
       <field>
         <name>nombre</name>
+        <rename/>
       </field>
       <field>
         <name>sexo</name>
+        <rename/>
       </field>
       <field>
         <name>estado_civil</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
+        <name>edad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_discapacidad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>numero_identificacion</name>
@@ -1392,15 +1419,19 @@ FROM public.ips</sql>
       </field>
       <field>
         <name>municipio</name>
+        <rename/>
       </field>
       <field>
         <name>departamento</name>
+        <rename/>
       </field>
       <field>
         <name>estrato</name>
+        <rename/>
       </field>
       <field>
         <name>proviene_otra_eps</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1439,62 +1470,6 @@ FROM public.ips</sql>
     <fields>
       <field>
         <name>id_beneficiario</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>tipo_identificacion</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>nombre</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>fecha_nacimiento</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>sexo</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>estado_civil</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>tipo_discapacidad</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>tipo_usuario</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1834,7 +1809,7 @@ FROM public.ips</sql>
   tipo_identificacion
 , id_beneficiario
 , nombre
-, age(fecha_nacimiento) as edad
+,age(fecha_nacimiento) as edad
 , sexo
 , estado_civil
 , tipo_discapacidad
@@ -2125,7 +2100,7 @@ FROM "public".cotizante_beneficiario
 , nombre
 , estado_civil
 , sexo
-, age(fecha_nacimiento) as edad
+,age(fecha_nacimiento) as edad
 , tipo_discapacidad
 , id_ips
 , estracto
