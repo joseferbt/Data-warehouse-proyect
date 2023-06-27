@@ -784,6 +784,10 @@
         <name>id_ips</name>
         <rename/>
       </field>
+      <field>
+        <name>estracto</name>
+        <rename>estrato</rename>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -1258,6 +1262,7 @@ FROM "public".cotizante_beneficiario
 , fecha_nacimiento
 , tipo_discapacidad
 , id_ips
+, estracto
 FROM "public".cotizante
 </sql>
     <limit>0</limit>
@@ -1413,6 +1418,29 @@ FROM "public".cotizante
         <precision>-1</precision>
         <origin>cotizante</origin>
         <comments>id_ips</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Bogota</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>estracto</name>
+        <length>2</length>
+        <precision>-1</precision>
+        <origin>cotizante</origin>
+        <comments>estracto</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -1645,6 +1673,10 @@ FROM public.ips</sql>
         <name>departamento</name>
         <rename/>
       </field>
+      <field>
+        <name>estracto</name>
+        <rename>estrato</rename>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -1675,7 +1707,8 @@ FROM public.ips</sql>
     <connection>ETL-process</connection>
     <sql>SELECT
   cedula,
-id_ips
+id_ips,
+estracto
 FROM "public".cotizante
 </sql>
     <limit>0</limit>
@@ -1716,6 +1749,29 @@ FROM "public".cotizante
         <precision>-1</precision>
         <origin>cotizante 2</origin>
         <comments>id_ips</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Bogota</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>estracto</name>
+        <length>2</length>
+        <precision>-1</precision>
+        <origin>cotizante 2</origin>
+        <comments>estracto</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -2072,6 +2128,10 @@ FROM "public".cotizante
         <name>departamento</name>
         <rename/>
       </field>
+      <field>
+        <name>estrato</name>
+        <rename/>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -2162,6 +2222,11 @@ FROM "public".cotizante
       <field>
         <name>departamento</name>
         <lookup>departamento</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>estrato</name>
+        <lookup>estrato</lookup>
         <update>Insert</update>
       </field>
       <return>
