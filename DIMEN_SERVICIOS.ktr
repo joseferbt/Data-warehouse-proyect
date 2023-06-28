@@ -437,6 +437,57 @@
   <notepads>
   </notepads>
   <connection>
+    <name>colombia</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>colombia-saludable</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>ETL-process</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
@@ -501,7 +552,7 @@
     <hop>
       <from>HOSPITALIZACIONES</from>
       <to>Add constants</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Add constants 3</from>
@@ -662,7 +713,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ETL-process</connection>
+    <connection>colombia</connection>
     <sql>SELECT codigo_cita, id_usuario,
 fecha_solicitud, fecha_atencion,
 id_medico FROM public.citas_generales</sql>
@@ -880,7 +931,7 @@ id_medico FROM public.citas_generales</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>1008</xloc>
       <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
@@ -896,7 +947,7 @@ id_medico FROM public.citas_generales</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ETL-process</connection>
+    <connection>colombia</connection>
     <sql>SELECT codigo_hospitalizacion,
 id_usuario,
 fecha_solicitud,
@@ -1057,23 +1108,18 @@ id_medico FROM public.hospitalizaciones</sql>
       </field>
       <field>
         <name>id_usuario</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_solicitud</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_atencion</name>
-        <rename/>
       </field>
       <field>
         <name>tipo_servicio</name>
-        <rename/>
       </field>
       <field>
         <name>id_medico</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1109,23 +1155,18 @@ id_medico FROM public.hospitalizaciones</sql>
       </field>
       <field>
         <name>id_usuario</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_solicitud</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_atencion</name>
-        <rename/>
       </field>
       <field>
         <name>tipo_servicio</name>
-        <rename/>
       </field>
       <field>
         <name>id_medico</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1161,23 +1202,18 @@ id_medico FROM public.hospitalizaciones</sql>
       </field>
       <field>
         <name>id_usuario</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_solicitud</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_atencion</name>
-        <rename/>
       </field>
       <field>
         <name>tipo_servicio</name>
-        <rename/>
       </field>
       <field>
         <name>id_medico</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1206,7 +1242,7 @@ id_medico FROM public.hospitalizaciones</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ETL-process</connection>
+    <connection>colombia</connection>
     <sql>SELECT codigo_urgencia,
 id_usuario,
 fecha_solicitud,
