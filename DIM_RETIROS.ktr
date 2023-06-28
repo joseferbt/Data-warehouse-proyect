@@ -437,6 +437,57 @@
   <notepads>
   </notepads>
   <connection>
+    <name>colombia</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>colombia-saludable</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>ETL-process</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
@@ -999,8 +1050,8 @@
         <update>Insert</update>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
-        <lookup>fecha_nacimiento</lookup>
+        <name>edad</name>
+        <lookup>edad</lookup>
         <update>Insert</update>
       </field>
       <field>
@@ -1148,7 +1199,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ETL-process</connection>
+    <connection>colombia</connection>
     <sql>SELECT id_usuario,
 fecha_pago FROM public.pagos</sql>
     <limit>0</limit>
@@ -1230,7 +1281,7 @@ fecha_pago FROM public.pagos</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ETL-process</connection>
+    <connection>colombia</connection>
     <sql>SELECT id_usuario, fecha_retiro, cambio_a_eps FROM public.retiros</sql>
     <limit>0</limit>
     <lookup/>
@@ -1337,18 +1388,23 @@ fecha_pago FROM public.pagos</sql>
     <fields>
       <field>
         <name>sexo</name>
+        <rename/>
       </field>
       <field>
         <name>estado_civil</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
+        <name>edad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_discapacidad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>grupo_familiar</name>
@@ -1356,12 +1412,15 @@ fecha_pago FROM public.pagos</sql>
       </field>
       <field>
         <name>municipio</name>
+        <rename/>
       </field>
       <field>
         <name>departamento</name>
+        <rename/>
       </field>
       <field>
         <name>estrato</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1393,33 +1452,43 @@ fecha_pago FROM public.pagos</sql>
     <fields>
       <field>
         <name>sexo</name>
+        <rename/>
       </field>
       <field>
         <name>estado_civil</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
+        <name>edad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_discapacidad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>id_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>municipio</name>
+        <rename/>
       </field>
       <field>
         <name>departamento</name>
+        <rename/>
       </field>
       <field>
         <name>estrato</name>
+        <rename/>
       </field>
       <field>
         <name>fecha_retiro</name>
+        <rename/>
       </field>
       <field>
         <name>cambio_a_eps</name>
@@ -1490,39 +1559,51 @@ fecha_pago FROM public.pagos</sql>
     <fields>
       <field>
         <name>id_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>estrato</name>
+        <rename/>
       </field>
       <field>
         <name>sexo</name>
+        <rename/>
       </field>
       <field>
         <name>estado_civil</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha_nacimiento</name>
+        <name>edad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_discapacidad</name>
+        <rename/>
       </field>
       <field>
         <name>tipo_usuario</name>
+        <rename/>
       </field>
       <field>
         <name>municipio</name>
+        <rename/>
       </field>
       <field>
         <name>departamento</name>
+        <rename/>
       </field>
       <field>
         <name>ultima_fecha_de_pago</name>
+        <rename/>
       </field>
       <field>
         <name>fecha_retiro</name>
+        <rename/>
       </field>
       <field>
         <name>nueva eps</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
